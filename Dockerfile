@@ -12,7 +12,7 @@ ARG DEV=false
 
 RUN python -m venv /py && \
     /py/bin/pip install --no-cache-dir --upgrade pip && \
-    apk add --update --no-cache posgres-client && \
+    apk add --update --no-cache postgresql-client && \
     apk add --update --no-cache --virtual .tmp-build-deps\
         build-base postgresql-dev musl-dev  && \
     /py/bin/pip install --no-cache-dir -r /tmp/requirements.txt &&\
